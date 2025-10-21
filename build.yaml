@@ -10,3 +10,6 @@ shield: [ "zm9k_ble_c"]
 include:
   - board: zm_ble
     shield: zm9k_ble_c
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: zm9k_ble_c
