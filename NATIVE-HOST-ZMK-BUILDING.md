@@ -41,7 +41,7 @@ source zephyr-rtos/zephyr-env.sh
 
 ### 3) Build/Compile
 
-✅ On successful builds, the firmware will be built and located in the `build/zephyr/zmk/app/build/zmk.uf2` file
+✅ On successful builds, the firmware will be built and located in the `build/zephyr/zmk.uf2` file
 
 #### Onboard nRF52840 (no top microcontroller)
 ```bash
