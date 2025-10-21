@@ -1,0 +1,6 @@
+if SHIELD_ZM9K_BLE_C
+
+config ZMK_KEYBOARD_NAME
+    default "ZM9K BLE C"
+
+endif

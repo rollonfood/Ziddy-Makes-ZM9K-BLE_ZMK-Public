@@ -1,0 +1,122 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    behaviors {
+        mo_sl: Hold-MOLayer_Tap-SlLayer{
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sl>;
+        };
+        // ble_s: ble_select{
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     flavor = "hold-preferred";
+        //     tapping-term-ms = <200>;
+        //     bindings = <&bt 5>, <&bt 5>;
+        // };
+    }; 
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                              &kp A             &kp B             &kp C
+                              &kp D             &kp E             &kp F
+                &lt 1 C_MUTE  &kp G             &kp H             &kp I
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        fn_layer {
+            display-name = "1 - FN Layer";
+            bindings = <
+                              &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
+                              &none        &none        &none
+                &trans        &none        &none        &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        2layer {
+            display-name = "2 - Layer";
+            bindings = <
+                              &kp 1        &kp 2         &kp 3 
+                              &kp 4        &kp 5         &kp 6
+                &kp 7         &kp 8        &kp 9         &kp 0
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+        
+        3layer {
+            display-name = "3 - Layer";
+            bindings = <
+                              &kp LS(A)        &kp LS(B)         &kp LS(C) 
+                              &kp LS(D)        &kp LS(E)         &kp LS(F)
+                &kp LS(G)     &kp LS(H)        &kp LS(I)         &kp LS(J)
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        4layer {
+            display-name = "4 - Layer";
+            bindings = <
+                              &none        &none         &none
+                              &none        &none         &none
+                &none         &none        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        5layer {
+            display-name = "5 - Layer";
+            bindings = <
+                              &none        &none         &none
+                              &none        &none         &none
+                &none         &none        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        6layer {
+            display-name = "6 - Layer";
+            bindings = <
+                              &none        &none         &none
+                              &none        &none         &none
+                &none         &none        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+        7layer {
+            display-name = "7 - Layer";
+            bindings = <
+                              &none        &none         &none
+                              &none        &none         &none
+                &none         &none        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+        };
+        8layer {
+            display-name = "8 - Layer";
+            bindings = <
+                              &none        &none         &none
+                              &none        &none         &none
+                &none         &none        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+        };
+    };
+};

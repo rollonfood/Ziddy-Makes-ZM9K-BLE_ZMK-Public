@@ -1,0 +1,10 @@
+file_format: "1"
+id: zm_ble
+name: zm_ble
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://shop.ziddymakes.com/
+exposes: [pro_micro]

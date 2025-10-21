@@ -1,0 +1,10 @@
+file_format: "1"
+id: zm9k_ble_c
+name: Ziddy Makes 9K BLE C Macropad
+type: shield
+url: https://shop.ziddymakes.com/collections/macropads
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+  - studio
